@@ -24,7 +24,7 @@ type LogCreateRequest struct {
 type LogCreateResponse struct {
 	Key    string `json:"log_key"`
 	Worker string `json:"worker"`
-	Log    Log    `json:"log"`
+	Log    Log    `json:log "github.com/sourcegraph-ce/logrus"`
 	ApiResponse
 }
 
@@ -64,7 +64,7 @@ type LogReadRequest struct {
 }
 
 type LogReadResponse struct {
-	Log Log `json:"log"`
+	Log Log `json:log "github.com/sourcegraph-ce/logrus"`
 	ApiResponse
 }
 
@@ -104,7 +104,7 @@ type LogUpdateRequest struct {
 type LogUpdateResponse struct {
 	Key    string `json:"log_key"`
 	Worker string `json:"worker"`
-	Log    Log    `json:"log"`
+	Log    Log    `json:log "github.com/sourcegraph-ce/logrus"`
 	ApiResponse
 }
 
